@@ -1,0 +1,21 @@
+Specs-Main:
+- Write logic that takes a blob of text as a parameter and tokenizes this blob into words. Words are delimited by any character other than a-z, A-Z, or 0-9.
+- Write logic to track all unique words encountered and the number of times each was encountered. Words should be matched in a case-insensitive manner. This should return the top 10 words (and their counts).
+- Provide some documentation for the code you wrote in each of the previous steps.
+- You must test your code. Make sure you include some brief documentation on how to run the tests. Any collection of plain text files can be used as input, and we suggest you try out some free plain text books fromhttp://www.gutenberg.org/
+
+Specs-Optional:
+- Write a command-line interface for your indexer that takes the filenames of text blobs as arguments, and then prints the top 10 words across all files to standard output.
+- Use source control to help you develop this software. If possible, we'd like you to post this on a public platform like GitHub or Bitbucket and then send us a link.
+- Ensure that you can run your code in places other than your own development environment, and provide installation/deployment instructions. Provide documentation that walks the user through using your application.
+- Extend your application execute concurrently. You may choose to support a fixed, configurable number of workers or to allow changing the number of workers dynamically.
+- Extend your application to be distributed, such that workers can run on separate machines from each other. Hint: you may leverage existing open source technologies to accomplish this.
+
+To-Do List:
+- First implement basic function to tokenize
+- Testing for this function
+- Top 10 words
+- Testing ^
+- Easier to run through command line
+- Testing ^
+- Dev environment generalization: VM or Vagrant?
