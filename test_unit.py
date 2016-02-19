@@ -23,7 +23,7 @@ def test_tokenize_4():
 
 # Generic test
 def test_wordcount_1():
-    with open ('huckleberry.txt', 'r') as f:
+    with open ('sample_texts/huckleberry.txt', 'r') as f:
         assert wordcount.wordcount(f.read()) == [
             'and', 'the', 'i', 'a', 'to', 'it', 't', 'was', 'he', 'of'
         ]
@@ -31,10 +31,10 @@ def test_wordcount_1():
 # Merging two files
 def test_wordcount_2():
     blob = ''
-    with open ('textfile1.txt', 'r') as f:
+    with open ('sample_texts/textfile1.txt', 'r') as f:
         blob += f.read()
 
-    with open ('textfile2.txt', 'r') as f:
+    with open ('sample_texts/textfile2.txt', 'r') as f:
         blob = blob + ' ' + f.read()
 
     assert wordcount.wordcount(blob) == ['this', 'is', 'a', 'test', 'file',
