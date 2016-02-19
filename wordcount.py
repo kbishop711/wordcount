@@ -2,6 +2,7 @@
 
 import operator
 import string
+import sys
 
 # These are all of our legal characters that can be in words
 CHARS = string.ascii_letters + string.digits
@@ -22,11 +23,11 @@ def tokenize(text_blob):
         if c in CHARS:
             next_word += c
         elif next_word != '':
-            tokens.append(next_word)
+            tokens.append(next_word.lower())
             next_word = ''
 
     if next_word != '':
-        tokens.append(next_word)
+        tokens.append(next_word.lower())
 
     return tokens
 
@@ -63,4 +64,10 @@ def wordcount(text_blob):
 
     return top_ten
 
-print wordcount("cat cat dog dog moose goat goat")
+if __name__ == "__main__":
+    blob = ''
+    for file_blob in sys.argv[1:]:
+        with open(file_blob, 'r') as i:
+            blob = blob + ' ' + i.read()
+    print wordcount(blob)
+

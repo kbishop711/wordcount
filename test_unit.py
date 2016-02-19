@@ -4,12 +4,12 @@ import wordcount
 
 # Test base case
 def test_tokenize_1():
-    assert wordcount.tokenize('Hello World!') == ['Hello', 'World']
-    assert wordcount.tokenize('Hello World!') != ['World', 'Hello']
+    assert wordcount.tokenize('Hello World!') == ['hello', 'world']
+    assert wordcount.tokenize('Hello World!') != ['world', 'hello']
 
 # Test both letters and numbers
 def test_tokenize_2():
-    assert wordcount.tokenize('He110 W0R1D') == ['He110', 'W0R1D']
+    assert wordcount.tokenize('He110 W0R1D') == ['he110', 'w0r1d']
 
 # Test for non ascii letters and numbers
 def test_tokenize_3():
@@ -20,3 +20,22 @@ def test_tokenize_3():
 # Test empty string returns empty list
 def test_tokenize_4():
     assert wordcount.tokenize('') == []
+
+# Generic test
+def test_wordcount_1():
+    with open ('huckleberry.txt', 'r') as f:
+        assert wordcount.wordcount(f.read()) == [
+            'and', 'the', 'i', 'a', 'to', 'it', 't', 'was', 'he', 'of'
+        ]
+
+# Merging two files
+def test_wordcount_2():
+    blob = ''
+    with open ('textfile1.txt', 'r') as f:
+        blob += f.read()
+
+    with open ('textfile2.txt', 'r') as f:
+        blob = blob + ' ' + f.read()
+
+    assert wordcount.wordcount(blob) == ['this', 'is', 'a', 'test', 'file',
+                                         '1', '2', '3', '4', '5']
