@@ -5,10 +5,10 @@ This is an exercise to find the top 10 most occurring words in a text file.
 This project does not use any specific libraries to be installed. It is
 currently tested to work with Python 2.7.x. 
 
-You will need 'tox' in order to run the tests. This can be installed with
+You will need `tox` in order to run the tests. This can be installed with
 > pip install tox
 or 
-> easyinstall tox
+> easy_install tox
 
 ### Running the script
 wordcount takes your text blob argument as a file during runtime. You can 
@@ -30,7 +30,7 @@ frequency in the text blob:
 
 ### Importing wordcount
 You can also import the wordcount class to directly use the functions
-"wordcount()" and "tokenize()". "tokenize()" takes a text blob and returns
-a list of possibly repeating words, a tokenization of the text. "wordcount()"
+`wordcount()` and `tokenize()`. `tokenize()` takes a text blob and returns
+a list of possibly repeating words, a tokenization of the text. `wordcount()`
 takes a text blob and returns a list of the top 10 most repeating words, in 
 the same format as the script output.
