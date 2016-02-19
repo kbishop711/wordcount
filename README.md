@@ -15,6 +15,7 @@ wordcount takes your text blob argument as a file during runtime. You can
 give it multiple files, and the top 10 words across those files will be
 returned. 
 > python wordcount.py textfile.txt
+
 > python wordcount.py textfile1.txt textfile2.txt textfile3.txt
 
 Ensure that these input files are in plain-text. A word is defined as any 
